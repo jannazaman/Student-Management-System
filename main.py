@@ -4,9 +4,11 @@ from PIL import ImageTk
 
 def login():
     if usernameEntry.get() == '' or passwordEntry.get() == '':
-        messagebox.showerror('Invalid Credentials', 'Both username and password are required fields.')
+        messagebox.showerror('Error', 'Both username and password are required fields.')
     elif usernameEntry.get() == 'Janna' and passwordEntry.get() == '12345':
-        messagebox.showinfo('Login Successful', 'Welcome')
+        messagebox.showinfo('Login Successful', 'Welcome!')
+    else:
+        messagebox.showerror('Invalid Credentials', 'Please enter correct username and password.')
 
 window = Tk()
 
