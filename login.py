@@ -6,7 +6,13 @@ def login():
     if usernameEntry.get() == '' or passwordEntry.get() == '':
         messagebox.showerror('Error', 'Both username and password are required fields.')
     elif usernameEntry.get() == 'Janna' and passwordEntry.get() == '12345':
-        messagebox.showinfo('Login Successful', 'Welcome!')
+        # Use wraplength to set the width of the messagebox
+        messagebox.showinfo('Approved', 'Welcome! Login Successful.')
+
+        # Close login window when sms window opens
+        window.destroy()
+        import sms
+
     else:
         messagebox.showerror('Invalid Credentials', 'Please enter correct username and password.')
 
@@ -14,6 +20,7 @@ window = Tk()
 
 # Width & Height of window (+0+0 is dist from x & y-axis)
 window.geometry('1280x700+0+0')
+window.title('Login System')
 # Disable maximize feature
 window.resizable(False, False)
 
@@ -25,8 +32,8 @@ loginFrame = Frame(window, bg='azure3')
 loginFrame.place(x=400, y=150)
 
 logoImage = PhotoImage(file='logo.png')
-logoLabel = Label(loginFrame, image=logoImage)
-logoLabel.grid(row=0, column=0, columnspan=2)
+logoLabel = Label(loginFrame, image=logoImage, bg='azure3')
+logoLabel.grid(row=0, column=0, columnspan=2, pady=5)
 
 usernameImage = PhotoImage(file='user.png')
 usernameLabel = Label(loginFrame, image=usernameImage, text='Username', compound=LEFT
