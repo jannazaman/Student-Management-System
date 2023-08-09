@@ -1,6 +1,9 @@
 # Student-Management-System
 A comprehensive Student Management System (SMS) web application built using Python's Tkinter GUI library and integrated with a MySQL database. This project showcases my ability to create user-friendly applications with intuitive UI, database integration, and enhanced security through user authentication.
 
+### Login View
+![Login Page ](snake-game.jpg)
+
 ## Key Features
 * User Authentication: Secure login system ensures only authorized users can access the application, enhancing data privacy.
 * CRUD Functionality: Achieved full CRUD (Create, Read, Update, Delete) operations for student records, allowing seamless data manipulation.
