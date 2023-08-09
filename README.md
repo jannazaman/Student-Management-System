@@ -4,6 +4,12 @@ A comprehensive Student Management System (SMS) web application built using Pyth
 ### Login View
 ![Login Page ](loginpage_demo.png)
 
+### Connect Database View
+![Connection ](connectDB_demo.png)
+
+### Search Demonstration 
+![Search ](search_demo.png)
+
 ## Key Features
 * User Authentication: Secure login system ensures only authorized users can access the application, enhancing data privacy.
 * CRUD Functionality: Achieved full CRUD (Create, Read, Update, Delete) operations for student records, allowing seamless data manipulation.
