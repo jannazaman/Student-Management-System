@@ -30,7 +30,6 @@ def export_data():
 
 def toplevel_field_data(title, button_text, command):
     global idEntry, nameEntry, phoneEntry, emailEntry, addressEntry, genderEntry, dobEntry, alter_window
-
     alter_window = Toplevel()  # It creates a new top-level window.
     alter_window.title(title)  # Instead of passing title directly, pass title variable
     alter_window.resizable(False, False)
@@ -132,7 +131,8 @@ def search_data():
     # Select all columns from the student table where the specified column match the search criteria
     query = 'select * from student where id=%s or name=%s or email=%s or phone=%s or address=%s or gender=%s or dob=%s'
 
-    mycursor.execute(query, (idEntry.get(), nameEntry.get(), emailEntry.get(), phoneEntry.get(), addressEntry.get(), genderEntry.get(), dobEntry.get()))
+    mycursor.execute(query, (idEntry.get(), nameEntry.get(), emailEntry.get(), phoneEntry.get(), 
+                             addressEntry.get(), genderEntry.get(), dobEntry.get()))
     # Clear the existing contents of the studentTable widget to prepare for new data
     studentTable.delete(*studentTable.get_children())
 
@@ -143,7 +143,8 @@ def search_data():
 
 
 def add_data():
-    if idEntry.get()=='' or nameEntry.get()=='' or phoneEntry.get()=='' or emailEntry.get()=='' or addressEntry.get()=='' or genderEntry.get()=='' or dobEntry.get()=='':
+    if idEntry.get()=='' or nameEntry.get()=='' or phoneEntry.get()=='' or emailEntry.get()=='' or 
+    addressEntry.get()=='' or genderEntry.get()=='' or dobEntry.get()=='':
         messagebox.showerror('Error', 'All fields are required.', parent=alter_window)
     else:
         try:
